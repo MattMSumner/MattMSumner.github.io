@@ -44,11 +44,15 @@ ul.posts {
   margin-bottom: 2em;
 }
 
-ul.posts li {
+ul.posts li article {
   line-height: 1.75em;
 }
 
-ul.posts span {
+ul.posts li article header {
+  font-size: 150%;
+}
+
+ul.posts li article footer {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
