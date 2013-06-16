@@ -3,6 +3,7 @@ layout: post
 title:  "Up and Running!"
 date:   2013-06-13 18:53:09
 categories: general
+excerpt: So I've started a blog. I've been out in the "real world" for almost three years now, two of which I've been rapidly learning to develop web-applications. Two years ago I decided to learn ruby. The main aim was to start working with rails but all the internet gurus said "Without ruby one can be a good rails developer, but with ruby you will be a great rails developer!".
 ---
 
 So I've started a blog.

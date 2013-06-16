@@ -6,6 +6,9 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
+        <!-- bootstrap CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
 
@@ -15,32 +18,31 @@
     </head>
     <body>
 
+      <header id="blog-header">
         <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
+          <h1><a href="/">Appalling Farrago</a></h1>
+          <p class="lead">Just a load of nonsense</p>
+        </div>
+      </header>
+      <!-- Container -->
+      <div class="container">
+        {{ content }}
+      </div>
 
-                {{ content }}
+      <!-- Footer -->
+      <div class="footer">
+        <div class="container">
+          <p class='text-right'>
+            Matthew Sumner<br />
+            Web Developer<br />
+            matt@beechcare.com
+          </p>
+          <p class='text-right'>
+            <a href="http://twitter.com/MatthewMSumner/">twitter.com/MatthewMSumner</a><br />
+            <a href="http://github.com/DeviousDuck/">github.com/DeviousDuck</a><br />
+          </p>
+        </div>
+      </div>
 
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Matthew Sumner<br />
-                  Web Developer<br />
-                  matt@beechcare.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/DeviousDuck/">github.com/DeviousDuck</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-    
     </body>
 </html>
