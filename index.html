@@ -4,6 +4,6 @@ title: Appalling Farrago
 ---
     {% for post in site.posts %}
       <h2><a href="{{ post.url }}">{{ post.title }}</a><br/><small>{{ post.date | date_to_string }}</small></h2>
-      {{ content }}
+      {{ post.content }}
       <hr />
     {% endfor %}
