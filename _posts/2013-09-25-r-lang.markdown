@@ -7,27 +7,27 @@ categories: r installation
 
 We recently started using [New Relic][newrelic] to report on our biggest production app. So far it's been awesome, we are currently on the two week free trial of pro. The first problem it's helping us resolve is a loadtime spike that shows on the "Browser page load time" graph but nothing corrosponding on the "App server response time" graph.
 
-This spike is all spent in the network chunk. As there's no slow down shown in the application and the spikes are only at two office locations, I'm leaning towards it being a network inteference issue. To back this up I need more data!
+This spike is all spent in the network chunk. As there's no slowdown shown in the application and the spikes are only at two office locations, I'm leaning towards it being a network interference issue. To back this up I need more data!
 
 I recently did a free course at [code school][codeschool] in R. To test the network I'm planning to ping our server for 48 hours from my location and one of the locations experiencing the slowdown. I'll write the ping to a txt file and then use R to visualize the data. Hopefully I'll see the spike on one graph and not the other.
 
 I'll make a followup post describing how I eventually do this. In the meantime I need to install R! I ran into a couple of issues and the solution I eventually found [here][qiita] but I'm showing here for those of us limited to one language.
 
-{% highlight %}
+{% highlight bash %}
   % brew update
 {% endhighlight %}
 
-{% highlight %}
+{% highlight bash %}
   % brew install gfortran
 {% endhighlight %}
 
-{% highlight %}
+{% highlight bash %}
   % brew tap homebrew/science
 {% endhighlight %}
 
 Install [xquartz][xquartz]
 
-{% highlight %}
+{% highlight bash %}
   % brew install R
 {% endhighlight %}
 
