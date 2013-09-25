@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Installing R on Mountain Lion"
+date:   2013-09-25 14:32:54
+categories: r installation
+---
+
+We recently started using [New Relic][newrelic] to report on our biggest production app. So far it's been awesome, we are currently on the two week free trial of pro. The first problem it's helping us resolve is a loadtime spike that shows on the "Browser page load time" graph but nothing corrosponding on the "App server response time" graph.
+
+This spike is all spent in the network chunk. As there's no slow down shown in the application and the spikes are only at two office locations, I'm leaning towards it being a network inteference issue. To back this up I need more data!
+
+I recently did a free course at [code school][codeschool] in R. To test the network I'm planning to ping our server for 48 hours from my location and one of the locations experiencing the slowdown. I'll write the ping to a txt file and then use R to visualize the data. Hopefully I'll see the spike on one graph and not the other.
+
+I'll make a followup post describing how I eventually do this. In the meantime I need to install R! I ran into a couple of issues and the solution I eventually found [here][qiita] but I'm showing here for those of us limited to one language.
+
+{% highlight %}
+  % brew update
+{% endhighlight %}
+
+{% highlight %}
+  % brew install gfortran
+{% endhighlight %}
+
+{% highlight %}
+  % brew tap homebrew/science
+{% endhighlight %}
+
+Install [xquartz][xquartz]
+
+{% highlight %}
+  % brew install R
+{% endhighlight %}
+
+[newrelic]: http://newrelic.com/
+[codeschool]: http://www.codeschool.com/
+[qiita]: http://qiita.com/dkkoma@github/items/8b45ce94c2c5d89d567f
+[xquartz]: https://xquartz.macosforge.org/
