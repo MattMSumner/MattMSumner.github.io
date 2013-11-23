@@ -5,7 +5,7 @@ date:   2013-08-17 14:08:13
 categories: emberjs
 ---
 
-I recently went on a three day course for ember put on by [Tilde]({% post_url 2013-07-13-training-at-tilde %}) and I thought I'd make a post talking about the whole thing. Just a forewarning; I have only been coding for a sort time and come from a rails background, this post will be from the point of view of a rails developer.
+I recently went on a three day course for ember put on by [Tilde]({% post_url 2013-07-12-training-at-tilde %}) and I thought I'd make a post talking about the whole thing. Just a forewarning; I have only been coding for a sort time and come from a rails background, this post will be from the point of view of a rails developer.
 
 ## Ember JS is a Framework
 
