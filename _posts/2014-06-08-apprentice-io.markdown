@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Apprentice.IO"
-date:   2014-05-28 14:41:28
+date:   2014-06-08 09:41:28
 categories: thoughtbot apprenticeship
 ---
 
