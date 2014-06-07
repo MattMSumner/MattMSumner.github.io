@@ -2,7 +2,7 @@
 layout: post
 title:  "Thoughtbot Mentor"
 date:   2013-09-09 12:46:15
-categories: rails, code, general, vim
+categories: rails code general vim
 ---
 
 This morning I signed up for thoughtbot's [learn prime][learnprime] program. This is a monthly subscription of $249 and gives access to workshops, books, screencasts, Prime Bytes, the Learn Forum, and access to a thoughtbot Mentor for one-on-one coaching sessions. The big thing there I'm interested in is the mentor.
