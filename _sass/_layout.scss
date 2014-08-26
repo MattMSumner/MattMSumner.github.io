@@ -1,0 +1,11 @@
+header {
+  @include outer-container;
+}
+
+footer {
+  @include outer-container;
+}
+
+main {
+  @include outer-container;
+}

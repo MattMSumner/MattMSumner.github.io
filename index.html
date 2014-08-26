@@ -2,8 +2,10 @@
 layout: default
 title: Appalling Farrago
 ---
-    {% for post in site.posts %}
-      <h2><a href="{{ post.url }}">{{ post.title }}</a><br/><small>{{ post.date | date_to_string }}</small></h2>
-      {{ post.content }}
-      <hr />
-    {% endfor %}
+{% for post in site.posts %}
+  <article class='post'>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a><br/><small>{{ post.date | date_to_string }}</small></h2>
+    {{ post.excerpt }}
+    <hr />
+  </article>
+{% endfor %}

@@ -1,0 +1,27 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+@import "bourbon/bourbon";
+@import "base/grid-settings";
+@import "base/base";
+@import "neat/neat";
+@import "layout";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(http://fonts.googleapis.com/css?family=Poly);
+
+a {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $light-teal;
+  a {
+    text-decoration: none;
+  }
+}
+
+h2 small {
+  font-size: 0.5em;
+  color: $light-gray;
+}

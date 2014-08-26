@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>{{ page.title }}</title>
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Appalling Farrago</a></h1>
+      <p class="lead">Just a load of nonsense</p>
+    </header>
 
-        <!-- bootstrap CSS -->
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <main>
+      {{ content }}
+    </main>
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+    <footer>
+      <p class='text-right'>
+        Matthew Sumner<br />
+        Web Developer<br />
+        matt.m.sumner@gmail.com
+      </p>
+      <p class='text-right'>
+        <a href="http://twitter.com/MatthewMSumner/">twitter.com/MatthewMSumner</a><br />
+        <a href="http://github.com/DeviousDuck/">github.com/DeviousDuck</a><br />
+      </p>
+    </footer>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-      <header id="blog-header">
-        <div class="container">
-          <h1><a href="/">Appalling Farrago</a></h1>
-          <p class="lead">Just a load of nonsense</p>
-        </div>
-      </header>
-      <!-- Container -->
-      <div class="container">
-        {{ content }}
-      </div>
-
-      <!-- Footer -->
-      <div class="footer">
-        <div class="container">
-          <p class='text-right'>
-            Matthew Sumner<br />
-            Web Developer<br />
-            matt.m.sumner@gmail.com
-          </p>
-          <p class='text-right'>
-            <a href="http://twitter.com/MatthewMSumner/">twitter.com/MatthewMSumner</a><br />
-            <a href="http://github.com/DeviousDuck/">github.com/DeviousDuck</a><br />
-          </p>
-        </div>
-      </div>
-
-    </body>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -54,4 +38,5 @@
       ga('create', 'UA-44510916-1', 'appallingfarrago.com');
       ga('send', 'pageview');
     </script>
+  </body>
 </html>
