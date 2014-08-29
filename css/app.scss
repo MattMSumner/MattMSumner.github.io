@@ -25,3 +25,17 @@ h2 small {
   font-size: 0.5em;
   color: $light-gray;
 }
+
+body {
+  @include media($medium-screen-up) {
+    font-size: $medium-font-size;
+  }
+
+  @include media($large-screen-up) {
+    font-size: $large-font-size;
+  }
+
+  @include media($extra-large-screen-up) {
+    font-size: $extra-large-font-size;
+  }
+}

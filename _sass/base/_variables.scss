@@ -5,7 +5,10 @@ $base-font-family: $serif;
 $header-font-family: $sans-serif;
 
 // Sizes
-$base-font-size: 1.25em;
+$base-font-size: 0.8em;
+$medium-font-size: 1.2em;
+$large-font-size: 1.5em;
+$extra-large-font-size: 1.8em;
 $base-line-height: $base-font-size * 1.5;
 $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
 $header-line-height: $base-font-size * 1.25;
@@ -25,7 +28,7 @@ $dark-teal: #264848;
 $light-teal: #599C9F;
 
 // Background Color
-$base-background-color: white;
+$base-background-color: ivory;
 
 // Font Colors
 $base-font-color: $dark-teal;
