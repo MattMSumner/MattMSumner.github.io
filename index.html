@@ -5,7 +5,10 @@ title: Appalling Farrago
 {% for post in site.posts %}
   <article class='post'>
     <h2><a href="{{ post.url }}">{{ post.title }}</a><br/><small>{{ post.date | date_to_string }}</small></h2>
-    {{ post.excerpt }}
+    <p>{{ post.excerpt }}</p>
+    <p class="continue-reading">
+      <a href="{{ post.url }}">continue reading...</a>
+    </p>
     <hr />
   </article>
 {% endfor %}

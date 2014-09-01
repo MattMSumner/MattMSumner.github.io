@@ -12,6 +12,13 @@
 
 a {
   text-decoration: underline;
+  .continue-reading & {
+    color: $dark-orange;
+  }
+}
+
+.continue-reading {
+  text-align: right;
 }
 
 h1, h2, h3, h4, h5, h6 {
