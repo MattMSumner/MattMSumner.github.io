@@ -10,7 +10,7 @@ Boresare](http://mikeborsare.com/) a design apprentice who started just a few
 days before me. Congratulations to him as he was also hired by thoughtbot.
 
 I'm still planning to change a few things here and there to improve the blog,
-for instance it seem commenting is broken at the moment, but it seems to be a
+for instance it seems commenting is broken at the moment, but it seems to be a
 step in the right direction. I'd love any feedback and I hope the site is now
 easier to read.
 
