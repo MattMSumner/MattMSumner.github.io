@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Ergo Dox"
+date:   2014-09-29 11:00:00
+categories: keyboard ergodox
+---
+
+The last few weeks have been mercifully relaxed after the pace of thoughtbot's
+apprenticeship. I've mostly been working on internal projects and my new
+keyboard! This post is in fact being slowly typed on my
+[ergo dox](https://www.massdrop.com/buy/ergodox). I took a bunch of pictures
+during its construction and put them together into a gif for your viewing
+pleasure.
+
+![ergo-construction][ergo-construction]
+
+This was a super fun project which was made possible only with the help and
+expertise of [Tony](https://twitter.com/TonyD256). Here's the finished product:
+
+![ergo-finished][ergo-finished]
+
+[ergo-construction]:/img/ergo-dox-construction-25.gif
+[ergo-finished]:/img/ergo-dox-finished.jpg
