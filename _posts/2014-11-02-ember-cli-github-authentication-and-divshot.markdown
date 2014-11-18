@@ -53,7 +53,8 @@ We can then setup our application template to show a login button:
 {% endraw %}
 {% endhighlight %}
 
-`session` is provided by Torii. Lets get that `signInViaGithub` action setup:
+`session` is provided by Torii via a config setting we'll supply to
+`config/environments` later. Lets get that `signInViaGithub` action setup:
 
 {% highlight javascript %}
 // app/routes/application.js
@@ -74,7 +75,7 @@ export default Ember.Route.extend({
 });
 {% endhighlight %}
 
-and our Torii adapter so we can controller the logic for the temporary token
+and our Torii adapter so we can control the logic for the temporary token
 returned from github:
 
 {% highlight javascript %}
