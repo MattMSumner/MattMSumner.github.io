@@ -3,6 +3,7 @@ layout: post
 title:  "EmberCLI, Github authentication and DivShot"
 date:   2014-11-02 16:00:30
 categories: Ember EmberCLI Github Divshot Torii
+excerpt: This will be a multi part post, building a simple chat application. I may never actually build the chat functionality, as I'm more interested in setting up the authentication side of things. Non the less, context helps.
 ---
 
 I don't want to do authentication.
@@ -90,6 +91,7 @@ export default Ember.Object.extend({
     return new Ember.RSVP.Promise(function(resolve, reject){
       Ember.$.ajax({
         url: config.jibber.sessionUrl,
+        type: "POST",
         data: { 'github-auth-code': temporaryCode },
         dataType: 'json',
         success: Ember.run.bind(null, resolve),
@@ -190,7 +192,7 @@ where our rails app will eventually live on heroku:
   },
   "proxy": {
     "v1": {
-      "origin":"https://jibber-rails.herokuapp.com/",
+      "origin":"https://jibber-rails.herokuapp.com/v1/",
       "headers": {
         "Accept": "application/json"
       },
