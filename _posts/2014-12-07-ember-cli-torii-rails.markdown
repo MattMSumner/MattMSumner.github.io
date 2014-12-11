@@ -4,6 +4,8 @@ title:  "EmberCLI, Torii and Rails"
 date:   2014-12-07 12:38:11
 categories: Ember EmberCLI Github Divshot Torii Rails
 excerpt: When we left off we had a ember app setup on divshot to talk to a rails application for authentication via github. We'll start by generating a new rails app.
+redirect_from:
+  - /ember/embercli/github/divshot/torii/rails/2014/12/07/ember-cli-torri-rails.html
 ---
 
 This is the second part to my [previous post](

@@ -2,3 +2,5 @@ name: Appalling Farrago
 description: A blog about ruby, ember and anything else I want to write about.
 url: http://www.appallingfarrago.com/
 highlighter: pygments
+gems:
+  - jekyll-redirect-from
