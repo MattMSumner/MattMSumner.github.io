@@ -5,25 +5,129 @@ date:   2013-11-04 13:45:53
 categories: general
 ---
 
-I've been thinking a lot lately about what I should be doing. Since leaving university and discovering ruby I've constantly been learning and growing and really it's been easy. I've also been posting on here more often than I thought I would when I started. It sounds self defeating, but I honestly wasn't sure that I'd keep going after the first month. I'm glad I kinda have.
+I've been thinking a lot lately about what I should be doing. Since leaving
+university and discovering ruby I've constantly been learning and growing and
+really it's been easy. I've also been posting on here more often than I thought
+I would when I started. It sounds self defeating, but I honestly wasn't sure
+that I'd keep going after the first month. I'm glad I kinda have.
 
-I signed up for thoughtbot's [learn prime][learnprime] program almost two months ago now. Wow two months goes quickly. Now I'd listened to the [robots podcast][robots] before but I really started listening to everything after signing up for learn because I figured I'm using the paid stuff... might as well consume the free stuff as well. Anyway, one of the latest podcasts, [let your freak flag fly][podcast], [Ben][ben] interviews [Jeff Atwood][atwood], one of the co founders of Stack Overflow and a rabid blogger.
+I signed up for thoughtbot's [learn prime][learnprime] program almost two months
+ago now. Wow two months goes quickly. Now I'd listened to the [robots
+podcast][robots] before but I really started listening to everything after
+signing up for learn because I figured I'm using the paid stuff... might as well
+consume the free stuff as well. Anyway, one of the latest podcasts, [let your
+freak flag fly][podcast], [Ben][ben] interviews [Jeff Atwood][atwood], one of
+the co founders of Stack Overflow and a rabid blogger.
 
-[On his blog][atwood], Jeff talks about the thing that changed his life was dedicating himself to a schedule and sticking to it with his posts. This brings us to kind of an important question. Do you want to change your life? This is a wierd question to me. Mainly becuase I don't know how to answer it. I haven't spoken much about myself on here so maybe now is a good time to do so. This blog is ending up something I hadn't originally planned.
+[On his blog][atwood], Jeff talks about the thing that changed his life was
+dedicating himself to a schedule and sticking to it with his posts. This brings
+us to kind of an important question. Do you want to change your life? This is a
+weird question to me. Mainly because I don't know how to answer it. I haven't
+spoken much about myself on here so maybe now is a good time to do so. This blog
+is ending up something I hadn't originally planned.
 
-I'm massively lucky. Let's start there. I was born in England, I have two fantastic parents that came from rubbish backgrounds but are both crazy driven to succeed. One of their long term goals from before I was born was to move to the US. The first ten years of my life they went through constant sacrifices to always move towards what they wanted for our family. They decided often not to go on holiday so they could rather invest money into their various business ventures and were offered a few opportunities which would have made the short term easier but they turned down for the long term. The next ten years they did very well with their latest startup, so much so that my dad was able to quit his job at IBM and work full time with my mum. This went well for them, and after 8 years they sold the business to move to the US. Due to visa reasons this involved buying a similar company over here and basically starting again. These people are incredible and are a constant support for me and my wife.
+I'm massively lucky. Let's start there. I was born in England, I have two
+fantastic parents that came from rubbish backgrounds but are both crazy driven
+to succeed. One of their long term goals from before I was born was to move to
+the US. The first ten years of my life they went through constant sacrifices to
+always move towards what they wanted for our family. They decided often not to
+go on holiday so they could rather invest money into their various business
+ventures and were offered a few opportunities which would have made the short
+term easier but they turned down for the long term. The next ten years they did
+very well with their latest startup, so much so that my dad was able to quit his
+job at IBM and work full time with my mum. This went well for them, and after 8
+years they sold the business to move to the US. Due to visa reasons this
+involved buying a similar company over here and basically starting again. These
+people are incredible and are a constant support for me and my wife.
 
-So I grew up in England, primary school was fairly nondescript, secondary school (high school) I went to St. James Independent School for Boys. As you can tell from the name this was an all boys school, it was also a private school which mum and dad paid for by selling heat pads at fairs at the weekend. They ordered the heat pads from Korea (I think) and we'd all go out and sell them at health fairs and things. These were plastic shapes filled with concentrated sodium acetate, which is basically the flavouring for salt and vinegar crisps, and a metal disc that when you bend would agitate the liquid sodium acetate to become solid. This would release heat, although not enough to burn, and once it had cooled you could simply boil the whole thing to melt it back to it's liquid state. I've just looked it up on wikipedia, [if your interested][heatpad]. Anyway, St James was awesome, if a little wierd. That's probably for another post though.
+So I grew up in England, primary school was fairly nondescript, secondary school
+(high school) I went to St. James Independent School for Boys. As you can tell
+from the name this was an all boys school, it was also a private school which
+mum and dad paid for by selling heat pads at fairs at the weekend. They ordered
+the heat pads from Korea (I think) and we'd all go out and sell them at health
+fairs and things. These were plastic shapes filled with concentrated sodium
+acetate, which is basically the flavouring for salt and vinegar crisps, and a
+metal disc that when you bend would agitate the liquid sodium acetate to become
+solid. This would release heat, although not enough to burn, and once it had
+cooled you could simply boil the whole thing to melt it back to it's liquid
+state. I've just looked it up on wikipedia, [if your interested][heatpad].
+Anyway, St James was awesome, if a little weird. That's probably for another
+post though.
 
-I never worked very hard at school. I did the bare minimum I could get away with and during my teenage years I was a complete asshole. I'm amazed that people put so much pressure and emphasis on a point in your life when your body is physically causing you to be a dickhead. It seems very different for girls. For guys we're completely insufferable and there's nothing you can do about it. It's like you wake up one day, thirteen years old, and someones put a veil of hatred over you and a device that makes you incapable of understanding what a complete arse your being right now. The important thing is that it doesn't really matter and no one should worry about it. I'm sure my parents did but they never took serious action. In England we had two sets of mayjor examinations. At 16 we take our GCSEs which I suppose are like SATs and we can leave after that if study isn't the most natural state. The next two years you study for A levels which is basically preparation for university. In my first year of A levels I basically decided to stop coming in to school and to instead spend most of my time in World of Warcraft. It was glorious! However, at the end of the year we had parent teacher interviews and it quickly came apparent that not only was I not attending the rather expensive school my parents had paid for, but also that the school didn't think it was worth mentioning until now. They were livid. Dad had to send mum home and talk to me alone about getting my shit together and being disappointed and all that jazz. Funnily enough I don't remember a lot about this, I'm sure it was far more traumatic for them.
+I never worked very hard at school. I did the bare minimum I could get away with
+and during my teenage years I was a complete asshole. I'm amazed that people put
+so much pressure and emphasis on a point in your life when your body is
+physically causing you to be a dickhead. It seems very different for girls. For
+guys we're completely insufferable and there's nothing you can do about it. It's
+like you wake up one day, thirteen years old, and someones put a veil of hatred
+over you and a device that makes you incapable of understanding what a complete
+arse your being right now. The important thing is that it doesn't really matter
+and no one should worry about it. I'm sure my parents did but they never took
+serious action. In England we had two sets of major examinations. At 16 we take
+our GCSEs which I suppose are like SATs and we can leave after that if study
+isn't the most natural state. The next two years you study for A levels which is
+basically preparation for university. In my first year of A levels I basically
+decided to stop coming in to school and to instead spend most of my time in
+World of Warcraft. It was glorious! However, at the end of the year we had
+parent teacher interviews and it quickly came apparent that not only was I not
+attending the rather expensive school my parents had paid for, but also that the
+school didn't think it was worth mentioning until now. They were livid. Dad had
+to send mum home and talk to me alone about getting my shit together, being
+disappointed and all that jazz. Funnily enough I don't remember a lot about
+this, I'm sure it was far more traumatic for them.
 
-Anyway, over the summer I convinced myself that university was heaven on earth and I had some offers for various universitys to study physics provided I got high enough grades in my A levels. I can't remember where I applied but I decided I would attend York University which was in the top ten for physics programs and it was in the north, so far away from home. If I have any advice for people choosing where to study, I would say pick somewhere far away from home, it means you can't run away. Anyway I had one year to complete the two year A levels I'd chosen. In England, you take around 10 GCSEs and they are always include english, math and all that jazz, then when you start A levels you basically pick 3 or 4 subjects you like and specialize down to that. So I had Math, Physics and Coputing as my three A levels (technically I also had further maths which counts as another A level but I always ignore it). I was ready to get my shit together and then the universe dicided to toss things up. My math teacher was diagnoised and died from cancer a month before term began which threw the school into disarray. They basically managed to cover everything except mine and two other boys further maths classes. Now my school was not at all happy with their own solution, but there was also a all girls school with students doing further maths, so they sent the three of us there.
+Anyway, over the summer I convinced myself that university was heaven on earth
+and I had some offers for various university to study physics provided I got
+high enough grades in my A levels. I can't remember where I applied but I
+decided I would attend York University which was in the top ten for physics
+programs and it was in the north, so far away from home. If I have any advice
+for people choosing where to study, I would say pick somewhere far away from
+home, it means you can't run away. Anyway I had one year to complete the two
+year A levels I'd chosen. In England, you take around 10 GCSEs and they are
+always include English, math and all that jazz, then when you start A levels you
+basically pick 3 or 4 subjects you like and specialize down to that. So I had
+Math, Physics and Computing as my three A levels (technically I also had further
+maths which counts as another A level but I always ignore it). I was ready to
+get my shit together and then the universe decided to toss things up. My math
+teacher was diagnosed and died from cancer a month before term began which
+threw the school into disarray. They basically managed to cover everything
+except mine and two other boys further maths classes. Now my school was not at
+all happy with their own solution, but there was also a all girls school with
+students doing further maths, so they sent the three of us there.
 
-This was awesome in so many ways. Maybe another post. I started dating my wife who I met doing math problems (awww yeah) and I got the grades I needed to get me to university. Maybe a quick note about choosing my degree as people seem to get concerned about this a lot. I chose to do a degree in physics because it required the least work at the time. My school was pushing people to choose courses and I'd heard math was hard. I would have picked something easier, but another requirement was that it pleased the most people. My parents seemed happy with the choice and so did my teachers so I didn't give a shit about the details. My dad was specifically against me choosing a computing degree as he assumed it would be obsolete the day they awarded it.
+This was awesome in so many ways. Maybe another post. I started dating my wife
+who I met doing math problems (awww yeah) and I got the grades I needed to get
+me to university. Maybe a quick note about choosing my degree as people seem to
+get concerned about this a lot. I chose to do a degree in physics because it
+required the least work at the time. My school was pushing people to choose
+courses and I'd heard math was hard. I would have picked something easier, but
+another requirement was that it pleased the most people. My parents seemed happy
+with the choice and so did my teachers so I didn't give a shit about the
+details. My dad was specifically against me choosing a computing degree as he
+assumed it would be obsolete the day they awarded it.
 
-Anyways I went to York University. Me and my girlfriend discussed breaking up as she was going to university in Durham which was an hour and half drive or 40 minute train ride away. We stayed together and jumped between the two campuses, I even went to a few physics lectures there to keep up. Over the summer I applied to transfer to Durham and completed my degree there, even extending it to a masters in theoretical physics. The year before we graduated I [proposed to my wife][proposal] and we got married afterwards. At this point my parents had moved to the US with my brother (although they of course came back for the wedding) and my sister was studying for a law degree at York. As newlyweds, we decided to come over to the US to see what all the fuss was about. My mother in law is originally from New York so it was relatively straight forward to get me a green card (my wife already a citizen) but it did take 6 months. We traveled Italy for a while and did a fair bit of volunteer work while mooching off her parents. When we finally got over here we mooched off my parents and I started working for them sorting out IT problems. My wife has a masters degree in chemistry so it wasn't long before she had a job and we moved into an apartment close to my parents.
+Anyways I went to York University. Me and my girlfriend discussed breaking up as
+she was going to university in Durham which was an hour and half drive or 40
+minute train ride away. We stayed together and jumped between the two campuses,
+I even went to a few physics lectures there to keep up. Over the summer I
+applied to transfer to Durham and completed my degree there, even extending it
+to a masters in theoretical physics. The year before we graduated I [proposed to
+my wife][proposal] and we got married afterwards. At this point my parents had
+moved to the US with my brother (although they of course came back for the
+wedding) and my sister was studying for a law degree at York. As newlyweds, we
+decided to come over to the US to see what all the fuss was about. My mother in
+law is originally from New York so it was relatively straight forward to get me
+a green card (my wife already a citizen) but it did take 6 months. We traveled
+Italy for a while and did a fair bit of volunteer work while mooching off her
+parents. When we finally got over here we mooched off my parents and I started
+working for them sorting out IT problems. My wife has a masters degree in
+chemistry so it wasn't long before she had a job and we moved into an apartment
+close to my parents.
 
-Over the last three years while living here I've been rapidly learning ruby on rails and managing a large production app the hard (and quickest) way. I'm currently waiting to hear back from an application I submitted to thoughtbot's apprentice program. Wether I get accepted or not I'll post about it here.
+Over the last three years while living here I've been rapidly learning ruby on
+rails and managing a large production app the hard (and quickest) way. I'm
+currently waiting to hear back from an application I submitted to thoughtbot's
+apprentice program. Wether I get accepted or not I'll post about it here.
 
 [learnprime]: https://learn.thoughtbot.com/
 [robots]: http://robots.thoughtbot.com/

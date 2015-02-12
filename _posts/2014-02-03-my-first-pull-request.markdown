@@ -5,7 +5,11 @@ date:   2014-02-03 20:46:15
 categories: github open-source
 ---
 
-I tried using thoughtbots [dotfiles][dotfiles] and their [laptop setup][laptop]. However, I noticed both hadn't updated their brewfile's tap from `tap thoughtbot/rcm` to `tap thoughtbot/formulae`. So I put in a [pull request][pull-dotfiles] or [two][pull-laptop] and my first contribution to opensource was born!
+I tried using thoughtbots [dotfiles][dotfiles] and their [laptop setup][laptop].
+However, I noticed both hadn't updated their brewfile's tap from `tap
+thoughtbot/rcm` to `tap thoughtbot/formulae`. So I put in a [pull
+request][pull-dotfiles] or [two][pull-laptop] and my first contribution to
+opensource was born!
 
 ![alt text][first-merge]
 

@@ -19,10 +19,12 @@ integration tests. As it's maintained by thoughtbotters,
 [capybara-webkit](https://github.com/thoughtbot/capybara-webkit) is a popular
 choice. However, all our specs broke with the following error:
 
-    Failure/Error: click_on 'All'
-     Capybara::Webkit::ClickFailed:
-       Failed to click element /html/body/div/div[1]/div/ul/li[1]/a because of overlapping element /html/body/div/div[1]/div/ul/li[4]/a at position 305, 848;
-       A screenshot of the page at the time of the failure has been written to /var/folders/2j/ky7q20tj15g_01ny2ftfcrwr0000gn/T/click_failed_rc1818.png
+{% highlight bash %}
+Failure/Error: click_on 'All'
+  Capybara::Webkit::ClickFailed:
+    Failed to click element /html/body/div/div[1]/div/ul/li[1]/a because of overlapping element /html/body/div/div[1]/div/ul/li[4]/a at position 305, 848;
+    A screenshot of the page at the time of the failure has been written to /var/folders/2j/ky7q20tj15g_01ny2ftfcrwr0000gn/T/click_failed_rc1818.png
+{% endhighlight %}
 
 Looking at the screen shot showed that all of our links on the dashboard were
 being rendered on top of one another. Now another apprentice,
