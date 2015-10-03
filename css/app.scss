@@ -8,6 +8,8 @@
 @import "neat/neat";
 @import "layout";
 @import "syntax";
+@import "header";
+@import "posts";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 @import url(http://fonts.googleapis.com/css?family=Poly);
 @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
@@ -36,6 +38,8 @@ h2 small {
 }
 
 body {
+  margin: 0;
+
   @include media($medium-screen-up) {
     font-size: $medium-font-size;
   }

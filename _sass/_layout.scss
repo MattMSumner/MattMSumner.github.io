@@ -1,11 +1,7 @@
-header {
-  @include outer-container;
-}
-
-footer {
+.container {
   @include outer-container;
 }
 
 main {
-  @include outer-container;
+  background-color: ivory;
 }
