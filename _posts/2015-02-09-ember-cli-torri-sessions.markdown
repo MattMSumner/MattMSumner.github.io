@@ -22,7 +22,7 @@ do something with the user returned by our backend.
 we're going to take advantage of. It's pretty simple to extend our torii adapter
 to give our `currentUser`:
 
-{% highlight javascript linenos %}
+```javascript
 // app/torii-adapters/application.js
 import Ember from "ember";
 import config from "../config/environment";
@@ -53,7 +53,7 @@ export default Ember.Object.extend({
     });
   }
 });
-{% endhighlight %}
+```
 The open property on our adapter needs to return a promise. Once that promise
 resolves, torii will merge any objects into the `session` object. On line 22, if
 the promise resolves we return a pojo with the currentUser. On line 20 we're
@@ -62,7 +62,7 @@ impliment fetching a session.
 
 Let's go ahead and update our application template to show the currentUser:
 
-{% highlight handlebars %}
+```handlebars
 {% raw %}
 <!-- app/templates/application.hbs -->
 <h2 id='title'>Welcome to Ember.js</h2>
@@ -82,7 +82,7 @@ Let's go ahead and update our application template to show the currentUser:
 
 {{outlet}}
 {% endraw %}
-{% endhighlight %}
+```
 
 And now when we sign in we can see the following:
 
@@ -95,7 +95,7 @@ away ;_;
 Fixing this is pretty simple but requires some changes on the rails side. Let's
 start by making the changes we need in ember before jumping into rails:
 
-{% highlight javascript %}
+```javascript
 app/routes/application.js
 import Ember from "ember";
 
@@ -116,13 +116,13 @@ export default Ember.Route.extend({
     }
   }
 });
-{% endhighlight %}
+```
 
 The changes to application route make sure we fetch the session when the route
 is activated. This should only happen once after the app boots. Now let's add
 fetch to our adapter:
 
-{% highlight javascript %}
+```javascript
 // app/torii-adapters/application.js
 import Ember from "ember";
 import config from "../config/environment";
@@ -136,13 +136,13 @@ export default Ember.Object.extend({
 
   ...
 });
-{% endhighlight %}
+```
 
 And that should be all we need here so let's dive back over to the rails app to
 make sure we can pass a github token or our custom token to the session create
 action:
 
-{% highlight ruby %}
+```ruby
 module V1
   class SessionsController < ApplicationController
     skip_before_action :verify_authenticity_token
@@ -184,18 +184,18 @@ module V1
     end
   end
 end
-{% endhighlight %}
+```
 
 Now our sessions controller handles fetching old sessions! All we need to do is
 push up to Heroku and Divshot and see if everything works.
 
-{% highlight bash %}
+```bash
 cd ~/development/jabber
 ember build --environment=production
 divshot push
 cd ~/development/jibber
 git push heroku master
-{% endhighlight %}
+```
 
 You can checkout my version [here](http://jabber.divshot.io/) and the source on
 [my github](https://github.com/MattMSumner):

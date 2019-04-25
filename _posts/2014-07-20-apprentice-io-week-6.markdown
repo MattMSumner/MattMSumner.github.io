@@ -25,7 +25,7 @@ The guide suggests using a simple-auth initializer to give simple-auth access to
 your applications ENV. I also found it a good place to override settings to
 allow for easier testing. Here is the initializer in our application:
 
-{% highlight coffee-script linenos %}
+```coffee-script
 # app/initializers/simple-auth-config.coffee
 `import Ember from 'ember'`
 
@@ -42,7 +42,7 @@ SimpleAuthInitializer =
         serverTokenEndpoint: 'api/oauth/token'
 
 `export default SimpleAuthInitializer`
-{% endhighlight %}
+```
 
 Line 10 is setting the
 [store](http://ember-simple-auth.simplabs.com/ember-simple-auth-api-docs.html#SimpleAuth-Stores-Base)
@@ -54,7 +54,7 @@ express server that ember-cli will setup for us if we run the api-stub
 generator. Speaking of which, we can run `ember g api-stub oauth/token` and edit
 `server/routes/oauth/token.js` as follows:
 
-{% highlight js linenos %}
+```js
 // server/routes/oauth/token.js
 module.exports = function(app) {
   var express = require('express');
@@ -75,12 +75,12 @@ module.exports = function(app) {
   });
   app.use('/api/oauth/token', tokenRouter);
 };
-{% endhighlight %}
+```
 
 This will allow us to write some integration tests to ensure our login and
 logout capabilities are working:
 
-{% highlight coffee-script linenos %}
+```coffee-script
 # tests/acceptance/visitor-signs-in-test.coffee
 `import Ember from 'ember'`
 `import startApp from '../helpers/start-app'`
@@ -125,14 +125,15 @@ user_sees_login_link = ->
 
 user_sees_error_message = ->
   equal find('#login-errors').text().trim(), "Wrong Username or Password"
-{% endhighlight %}
+```
 
 With this we have a few tests checking we can login and logout. If your
 following through, one of these tests should fail as we haven't yet implemented
 showing error messages on the login form. We can get this passing with the
 following change:
 
-{% highlight html linenos %}
+```hbs
+{% raw %}
 <!-- app/templates/login.hbs -->
 {{ "{{#if loginErrorMessage" }}}}
   <div id=login-errors>
@@ -147,7 +148,8 @@ following change:
   {{ "{{input id='password' placeholder='Enter Password' type='password' value=password"}}}}
   <button id=submit-login type="submit">Login</button>
 </form>
-{% endhighlight %}
+{% endraw %}
+```
 
 And with that we should have some passing tests and an ember-cli application
 ready to authenticate with a rails backend. So lets take a quick look there.
@@ -166,7 +168,7 @@ that handles oauth tokens for you. Doorkeepers install process setups almost
 everything for you so I only really needed to change the generated initializer
 to get things wired up. Here it is:
 
-{% highlight ruby linenos %}
+```rb
 Doorkeeper.configure do
   orm :active_record
 
@@ -189,7 +191,7 @@ Doorkeeper.configure do
     true
   end
 end
-{% endhighlight %}
+```
 
 And that's it. Now we have an ember application that will login using our rails
 application as an oauth provider:

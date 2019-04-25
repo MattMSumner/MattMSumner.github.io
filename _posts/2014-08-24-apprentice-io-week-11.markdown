@@ -30,7 +30,7 @@ so that custom elements can be added when special support is required. I found
 for handling SVG tags in ember and converted it into an initializer. I also
 translated to coffeescript:
 
-{% highlight coffee-script linenos %}
+```coffee-script
 # app/initializers/svg.coffee
 `import Ember from "ember"`
 
@@ -65,7 +65,7 @@ SvgInitializer =
       this
 
 `export default SvgInitializer`
-{% endhighlight %}
+```
 
 I'm not sure if an initializer is the correct place for this code, so let me
 know if you think it isn't.

@@ -8,11 +8,11 @@ categories: rails ruby &&
 I was reading through some ruby code and I found a cute little shortcut for
 avoiding lookups on those frustrating nil objects. The code is question was:
 
-{% highlight ruby %}
+```ruby
 def search_value
   params[:search] && params[:search][:value]
 end
-{% endhighlight %}
+```
 
 This comes from the excellent [geocoding on rails][gor]. What's so cool about
 this is it will return the first value if it is falsey otherwise it will return

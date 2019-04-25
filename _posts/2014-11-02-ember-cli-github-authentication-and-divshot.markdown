@@ -27,15 +27,15 @@ talking to your backend.
 Let's go ahead and generate a new [ember-cli](http://www.ember-cli.com/) app and
 add torii:
 
-{% highlight bash %}
+```bash
 ember new jabber
 cd jabber
 npm install torii --save-dev
-{% endhighlight %}
+```
 
 We can then setup our application template to show a login button:
 
-{% highlight html %}
+```html
 {% raw %}
 <!-- app/templates/application.hbs -->
 
@@ -52,12 +52,12 @@ We can then setup our application template to show a login button:
 
 {{outlet}}
 {% endraw %}
-{% endhighlight %}
+```
 
 `session` is provided by Torii via a config setting we'll supply to
 `config/environments` later. Lets get that `signInViaGithub` action setup:
 
-{% highlight javascript %}
+```javascript
 // app/routes/application.js
 import Ember from 'ember';
 
@@ -74,12 +74,12 @@ export default Ember.Route.extend({
     }
   }
 });
-{% endhighlight %}
+```
 
 and our Torii adapter so we can control the logic for the temporary token
 returned from github:
 
-{% highlight javascript %}
+```javascript
 // app/torii-adapters/application.js
 import Ember from 'ember';
 import config from '../config/environment';
@@ -102,12 +102,12 @@ export default Ember.Object.extend({
     });
   }
 });
-{% endhighlight %}
+```
 
 Here I've placed the url into `config/environment.js` as it will change between
 development and production.
 
-{% highlight javascript %}
+```javascript
 // app/config/environment.js
 ...
 
@@ -134,7 +134,7 @@ development and production.
   }
 
 ...
-{% endhighlight %}
+```
 
 I've modified it slightly, but all of the above can be found on the Torii github
 page.
@@ -171,16 +171,16 @@ think of as Heroku for ember-cli. There's even an addon to help get setup so
 we're going to be using it. Go get an account setup at divshot and run through
 the getting started, then run the following:
 
-{% highlight bash %}
+```bash
 npm install --save-dev ember-cli-divshot
 ember generate divshot
-{% endhighlight %}
+```
 
 This should give us a `divshot.json` file to setup settings for our app. Let's
 add some settings for [proxying](http://docs.divshot.com/services/proxy) to
 where our rails app will eventually live on heroku:
 
-{% highlight javascript %}
+```javascript
 // divshot.json
 {
   "name": "jabber",
@@ -201,12 +201,12 @@ where our rails app will eventually live on heroku:
     }
   }
 }
-{% endhighlight %}
+```
 
 Now we just need some settings for our new production environment:
 
 
-{% highlight javascript %}
+```javascript
 // app/config/environment.js
 ...
 
@@ -227,7 +227,7 @@ Now we just need some settings for our new production environment:
   }
 
 ...
-{% endhighlight %}
+```
 
 Don't forget to setup a production github application to fill in the
 `GITHUB_API_KEY` with.
@@ -237,10 +237,10 @@ Now let push our application up divshot. At the time of writing,
 to divshot so we'll use the plain old divshot-cli (which should have been
 installed during signup) and build the site ourselves:
 
-{% highlight bash %}
+```bash
 ember build --environment=production
 divshot push
-{% endhighlight %}
+```
 
 ## Next Time
 We'll look into setting up a rails app to authenticate with github and push it

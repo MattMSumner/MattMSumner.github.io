@@ -12,11 +12,11 @@ but need to handle the reference to a record that no longer exists.
 
 I'm sure everyone is familiar with adding the following assoication:
 
-{% highlight ruby %}
+```ruby
 class BillingReport < ActiveRecord::Base
   has_many :billing_items, dependent: :destroy
 end
-{% endhighlight %}
+```
 
 But I just discovered :restrict and :nullify which are awesome for a few rare
 associations you may need to accomidate for.

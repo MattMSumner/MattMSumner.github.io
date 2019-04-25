@@ -18,27 +18,27 @@ When we left off we had a ember app setup on divshot to talk to a rails
 application for authentication via github. We'll start by generating a new rails
 app:
 
-{% highlight bash %}
+```bash
 rails new jibber
 cd jibber
 bundle
-{% endhighlight %}
+```
 
 The first thing we'll want to do is create the route that our ember application
 is posting the github temporary token to:
 
-{% highlight ruby %}
+```ruby
 # config/routes.rb
 Rails.application.routes.draw do
   namespace :v1 do
     resources :sessions, only: [:create]
   end
 end
-{% endhighlight %}
+```
 
 Then we'll make our sessions controller:
 
-{% highlight ruby %}
+```ruby
 # app/controller/v1/sessions_controller.rb
 module V1
   class SessionsController < ApplicationController
@@ -59,7 +59,7 @@ module V1
     end
   end
 end
-{% endhighlight %}
+```
 
 We have to skip [the verify_authenticity_token
 before_action](http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html#method-i-verify_authenticity_token)
@@ -79,7 +79,7 @@ browser know that a new `session`, not a `user`, has been created.
 Let's go ahead and make the `UserFactory` class so we can spec out what the
 `GithubAuthenticator` needs to provide:
 
-{% highlight ruby %}
+```ruby
 # app/services/user_factory.rb
 class UserFactory
   def initialize(authenticator)
@@ -94,7 +94,7 @@ class UserFactory
 
   attr_reader :authenticator
 end
-{% endhighlight %}
+```
 
 So we pass an authenticator to the `UserFactory`'s initialize. The
 `find_or_create_user` then finds or creates the user using a name provided by
@@ -104,7 +104,7 @@ implement a `name` method.
 
 Now let's look at the `GithubAuthenticator` class:
 
-{% highlight ruby %}
+```ruby
 # app/services/github_authenticator.rb
 require "net/http"
 require "net/https"
@@ -175,7 +175,7 @@ class GithubAuthenticator
     }
   end
 end
-{% endhighlight %}
+```
 
 This class is pretty long, and I'd consider extracting a class to handle the
 oauth post to github. I won't go over every line, as I hope the code is clear,
@@ -189,15 +189,15 @@ We'll need to add `gem "octokit"` to our gemfile and run `bundle`. I also use
 [dotenv]() to manage environment variables in development so go ahead and add
 that to `dev` and `test` and put your github authentication details into `.env`:
 
-{% highlight bash %}
+```bash
 # .env
 GITHUB_KEY=github_develoment_key
 GITHUB_SECRET=github_development_secret
-{% endhighlight %}
+```
 
 Finally we'll want to create a `User` model and a migration:
 
-{% highlight ruby %}
+```ruby
 # app/models/user.rb
 class User < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
@@ -213,9 +213,9 @@ class User < ActiveRecord::Base
     end
   end
 end
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 # db/migrate/20141204213638_create_user.rb
 class CreateUser < ActiveRecord::Migration
   def change
@@ -227,22 +227,22 @@ class CreateUser < ActiveRecord::Migration
     end
   end
 end
-{% endhighlight %}
+```
 
 The user class is simple enough, we generate a unique token on create that the
 ember app can use for retrieving a session.
 
 Now if we have everything wired up correctly, with our rails app running:
 
-{% highlight bash %}
+```bash
 rails s -p9000
-{% endhighlight %}
+```
 
 and our ember-cli app running:
 
-{% highlight bash %}
+```bash
 ember s --proxy=http://localhost:9000
-{% endhighlight %}
+```
 
 we should be able to visit localhost:4200 and click on our login button. We
 then see our success alert and can see in the console the rails app returning
@@ -261,19 +261,19 @@ heroku-toolbelt`. Once you're setup, go ahead and create your heroku app. You'll
 then want to commit all our changes to git (if you haven't already) and push
 your code up to heroku:
 
-{% highlight bash %}
+```bash
 heroku create jibber-rails
 git add -A .
 git commit
 git push heroku master
 heroku run rake db:migrate
-{% endhighlight %}
+```
 
 We'll also want to set our two environment variables for github credentials:
 
-{% highlight bash %}
+```bash
 heroku config:set GITHUB_KEY=github_production_key GITHUB_SECRET=github_production_secret
-{% endhighlight %}
+```
 
 That gets us the same functionality in production!
 

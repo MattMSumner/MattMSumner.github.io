@@ -64,7 +64,7 @@ This server will use the files you've defined under the routes folder to return
 requests. Here you can specify fake data that your backend will eventually
 provide. Let's take a look at our `posts` file:
 
-{% highlight javascript linenos %}
+```javascript
 module.exports = function(app) {
   var express = require('express');
   var postsRouter = express.Router();
@@ -73,11 +73,11 @@ module.exports = function(app) {
   });
   app.use('/api/posts', postsRouter);
 };
-{% endhighlight %}
+```
 
 We can update this to return our fake data:
 
-{% highlight javascript linenos %}
+```javascript
 module.exports = function(app) {
   var express = require('express');
   var postsRouter = express.Router();
@@ -89,14 +89,14 @@ module.exports = function(app) {
   });
   app.use('/api/posts', postsRouter);
 };
-{% endhighlight %}
+```
 
 Run `ember serve` and see if it works!
 
-{% highlight bash %}
+```bash
 [~] curl http://localhost:4200/api/posts
 {"posts":[{"id":"1","title":"Awesome","body":"first post"},{"id":"2","title":"Wah","body":"second post"}]}
-{% endhighlight %}
+```
 
 Now we can develop our ember application while also creating robust examples of
 how we expect the backend to behave.
@@ -122,7 +122,7 @@ tests first install via `npm install ember-cli-pretender --save`. Here is a test
 from our diplomacy app using pretender:
 
 
-{% highlight coffee-script linenos %}
+```coffee-script
 `import startApp from '../helpers/start-app'`
 
 App = null
@@ -167,7 +167,7 @@ user_sees_logout_link = ->
 
 user_sees_own_email = ->
   equal find('#current-user').text().trim(), 'registeredUser@example.com'
-{% endhighlight %}
+```
 
 To be honest I don't feel great that a lot of this test file concerns stubbing
 our requests but it does allow me to be clear about what the server is

@@ -10,7 +10,7 @@ access config, I found [this post] with a solution that no longer works.
 Eventually I found [a post on the Ember London forum] with the solution that
 worked for me:
 
-{% highlight javascript %}
+```javascript
 // app/services/service-name.js
 import ServiceName from 'emberfire/services/service-name';
 import config from '../config/environment';
@@ -18,16 +18,16 @@ import config from '../config/environment';
 export default ServiceName.extend({
   config
 });
-{% endhighlight %}
+```
 
-{% highlight javascript %}
+```javascript
 // addon/services/service-name.js
 import Ember from 'ember';
 
 export default Ember.Service.extend({
   // awesome service code.
 });
-{% endhighlight %}
+```
 
 Hope this helps anyone looking.
 

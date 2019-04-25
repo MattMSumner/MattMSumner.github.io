@@ -25,7 +25,7 @@ roles would see plain text. This was a simple `if` `else` in the view therefor
 perfect functionality to justify a view spec. With a view spec I could quickly
 test against all roles that the correct link was generated.
 
-{% highlight ruby linenos %}
+```ruby
 require 'spec_helper'
 
 describe 'tickets/_ticket_details' do
@@ -81,4 +81,4 @@ describe 'tickets/_ticket_details' do
     policy.permitted_attributes
   end
 end
-{% endhighlight %}
+```

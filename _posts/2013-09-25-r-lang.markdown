@@ -26,17 +26,17 @@ need to install R! I ran into a couple of issues and the solution I eventually
 found [here][qiita] but I'm showing here for those of us limited to one
 language.
 
-{% highlight bash %}
+```bash
 % brew update
 % brew install gfortran
 % brew tap homebrew/science
-{% endhighlight %}
+```
 
 Install [xquartz][xquartz]
 
-{% highlight bash %}
+```bash
 % brew install R
-{% endhighlight %}
+```
 
 [newrelic]: http://newrelic.com/
 [codeschool]: http://www.codeschool.com/
