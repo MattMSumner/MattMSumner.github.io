@@ -16,6 +16,14 @@ ul, ol {
   }
 }
 
+ul {
+  @extend %default-ul;
+}
+
+ol {
+ @extend %default-ol;
+}
+
 dl {
   margin-bottom: $base-line-height / 2;
 
