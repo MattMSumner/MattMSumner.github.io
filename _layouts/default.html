@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>{{ page.title }}</title>
-      <meta name="viewport" content="width=device-width">
-      <link rel="stylesheet" href="/css/app.css">
-      <link href="/feed.xml" rel="alternate" title="RSS" type="application/rss+xml" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>{{ page.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poly:ital@0;1&family=Source+Sans+3:wght@400;600;700&family=Source+Code+Pro:wght@400;500&display=swap">
+    <link rel="stylesheet" href="/css/app.css">
+    <link href="/feed.xml" rel="alternate" title="RSS" type="application/rss+xml">
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <div class="container">
-        <h1><a href="/">Appalling Farrago</a></h1>
-        <p class="lead">A blog about stuff</p>
+        <a class="site-title" href="/">Appalling Farrago</a>
+        <p class="tagline">A blog about stuff</p>
       </div>
     </header>
 
@@ -22,16 +25,16 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <div class="container">
-        <p class='text-right'>
-          Matthew Sumner<br />
-          Web Developer<br />
+        <p>
+          Matthew Sumner<br>
+          Web Developer<br>
           matt.m.sumner@gmail.com
         </p>
-        <p class='text-right'>
-          <a href="http://twitter.com/MatthewMSumner/">twitter.com/MatthewMSumner</a><br />
-          <a href="http://github.com/MattMSumner">github.com/MattMSumner</a><br />
+        <p class="site-footer-links">
+          <a href="https://twitter.com/MatthewMSumner/">twitter.com/MatthewMSumner</a><br>
+          <a href="https://github.com/MattMSumner">github.com/MattMSumner</a>
         </p>
       </div>
     </footer>

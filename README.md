@@ -15,8 +15,8 @@ blog about Ruby, Ember, Scala and whatever else I felt like writing about
 | Custom domain | `appallingfarrago.com`, DNS on Cloudflare (DNS only, not proxied) | Pages settings, `CNAME` |
 | Markdown | kramdown with GFM input (Jekyll's default) | — |
 | Syntax highlighting | [Rouge](https://github.com/rouge-ruby/rouge) | `_config.yml`, `css/app.css` |
-| Styles | One plain CSS file, no preprocessor. Colours and sizes are CSS custom properties on `:root` | `css/app.css` |
-| Fonts | Google Fonts (Source Sans Pro, Poly) | `css/app.css` |
+| Styles | One plain CSS file, no preprocessor. Colours are CSS custom properties on `:root`, with a dark theme under `prefers-color-scheme: dark` | `css/app.css` |
+| Fonts | Google Fonts: Poly (body), Source Sans 3 (headings), Source Code Pro (code) | `_layouts/default.html` |
 | Plugins | `jekyll-redirect-from` (keeps old post URLs working) | `_config.yml` |
 | RSS | Hand-written Liquid template | `feed.xml` |
 
@@ -30,12 +30,12 @@ _config.yml         Site name, description, URL, plugins
 .github/workflows/
   pages.yml         Builds the site and deploys it to GitHub Pages
 _layouts/
-  default.html      Page shell: header, footer, CSS
+  default.html      Page shell: header, footer, fonts, CSS
   post.html         Wraps a single post (title + date + content)
 _posts/             One Markdown file per post: YYYY-MM-DD-slug.markdown
 css/app.css         All site styles, served as-is
 img/                Images referenced from posts
-index.html          Home page: lists every post with its excerpt
+index.html          Home page: a card per post with its excerpt
 feed.xml            RSS feed of the 10 most recent posts
 CNAME               Custom domain (informational; see Deploying)
 ```
