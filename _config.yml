@@ -5,9 +5,6 @@ url: https://appallingfarrago.com
 highlighter: rouge
 plugins:
   - jekyll-redirect-from
-sass:
-  style: compressed
-  sourcemap: never
 redirect_from:
   json: false
 exclude:

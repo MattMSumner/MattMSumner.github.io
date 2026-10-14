@@ -14,9 +14,9 @@ blog about Ruby, Ember, Scala and whatever else I felt like writing about
 | Hosting | GitHub Pages user site (`MattMSumner.github.io`) | — |
 | Custom domain | `appallingfarrago.com`, DNS on Cloudflare (DNS only, not proxied) | Pages settings, `CNAME` |
 | Markdown | kramdown with GFM input (Jekyll's default) | — |
-| Syntax highlighting | [Rouge](https://github.com/rouge-ruby/rouge) | `_config.yml`, `_sass/_syntax.scss` |
-| Styles | Sass, compiled by Jekyll with Dart Sass, using vendored copies of thoughtbot's [Bourbon](https://www.bourbon.io/), [Neat](https://neat.bourbon.io/) and Bitters-style base styles | `css/app.scss`, `_sass/` |
-| Fonts | Google Fonts (Source Sans Pro, Poly, Anonymous Pro) | `css/app.scss` |
+| Syntax highlighting | [Rouge](https://github.com/rouge-ruby/rouge) | `_config.yml`, `css/app.css` |
+| Styles | One plain CSS file, no preprocessor. Colours and sizes are CSS custom properties on `:root` | `css/app.css` |
+| Fonts | Google Fonts (Source Sans Pro, Poly) | `css/app.css` |
 | Plugins | `jekyll-redirect-from` (keeps old post URLs working) | `_config.yml` |
 | RSS | Hand-written Liquid template | `feed.xml` |
 
@@ -26,15 +26,14 @@ Jekyll site.
 ## Layout of the repo
 
 ```
-_config.yml         Site name, description, URL, plugins, Sass options
+_config.yml         Site name, description, URL, plugins
 .github/workflows/
   pages.yml         Builds the site and deploys it to GitHub Pages
 _layouts/
   default.html      Page shell: header, footer, CSS
   post.html         Wraps a single post (title + date + content)
 _posts/             One Markdown file per post: YYYY-MM-DD-slug.markdown
-_sass/              Sass partials (site styles + vendored Bourbon/Neat)
-css/app.scss        Sass entry point; Jekyll compiles it to /css/app.css
+css/app.css         All site styles, served as-is
 img/                Images referenced from posts
 index.html          Home page: lists every post with its excerpt
 feed.xml            RSS feed of the 10 most recent posts
@@ -88,9 +87,6 @@ bundle exec jekyll serve --livereload
 Open <http://localhost:4000>. The generated site goes to `_site/`, which is
 gitignored.
 
-The build prints a lot of Sass deprecation warnings from the vendored
-Bourbon/Neat code. They're harmless for now (see Known issues).
-
 To update dependencies, run `bundle update`. Bump `.ruby-version` to change
 Ruby; CI picks it up from that file.
 
@@ -123,11 +119,3 @@ A few things to know:
   `AAAA` records for the apex, and `www` as a `CNAME` to
   `mattmsumner.github.io`. All are **DNS only** (grey cloud). Turning on
   Cloudflare's proxy stops GitHub from renewing the HTTPS certificate.
-
-## Known issues / housekeeping
-
-- **Sass deprecations.** The vendored Bourbon 4 / Neat 1 code uses Sass
-  features (`@import`, `/` division, global functions like `lighten()`) that
-  Dart Sass 3 will remove. It compiles fine on Dart Sass 1.x today. The
-  long-term fix is replacing Bourbon/Neat with plain CSS, since modern CSS
-  covers almost everything they provide.
