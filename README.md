@@ -18,7 +18,6 @@ blog about Ruby, Ember, Scala and whatever else I felt like writing about
 | Fonts | Google Fonts (Source Sans Pro, Poly, Anonymous Pro) | `css/app.scss` |
 | Plugins | `jekyll-redirect-from` (keeps old post URLs working) | `_config.yml` |
 | RSS | Hand-written Liquid template | `feed.xml` |
-| Analytics | Google Analytics (Universal Analytics, `UA-44510916-1`) | `_layouts/default.html` |
 
 There's no JavaScript build, database or server code. It's a plain static
 Jekyll site.
@@ -28,7 +27,7 @@ Jekyll site.
 ```
 _config.yml         Site name, description, URL, highlighter, plugins
 _layouts/
-  default.html      Page shell: header, footer, CSS, analytics
+  default.html      Page shell: header, footer, CSS
   post.html         Wraps a single post (title + date + content)
 _posts/             One Markdown file per post: YYYY-MM-DD-slug.markdown
 _sass/              Sass partials (site styles + vendored Bourbon/Neat)
@@ -111,9 +110,6 @@ A few things to know:
 
 Things I noticed while writing this README, not yet fixed:
 
-- **Google Analytics is dead.** Universal Analytics (`UA-…` IDs) stopped
-  collecting data in 2023. Either remove the snippet from
-  `_layouts/default.html` or replace it with GA4 or another analytics tool.
 - **Mixed-content font imports.** `css/app.scss` loads Google Fonts over
   `http://`, which browsers block on an HTTPS page. Switch them to `https://`.
 - **`site.url` is `http://www.…`** in `_config.yml`, but the site is served
