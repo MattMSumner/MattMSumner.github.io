@@ -110,9 +110,6 @@ A few things to know:
 
 Things I noticed while writing this README, not yet fixed:
 
-- **`site.url` is `http://www.…`** in `_config.yml`, but the site is served
-  from `https://appallingfarrago.com/`. That affects absolute links in
-  `feed.xml`.
 - **Double slashes in the RSS feed.** `feed.xml` builds links as
   `{{ site.url }}/{{ post.url }}`, but both pieces already contain a slash.
   `jekyll-feed`, which GitHub Pages supports, could replace the hand-written
