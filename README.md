@@ -111,9 +111,6 @@ A few things to know:
 
 Things I noticed while writing this README, not yet fixed:
 
-- **`.sass-cache/` is committed.** It's in `.gitignore`, but it was added
-  before that rule existed. Remove it with
-  `git rm -r --cached .sass-cache`.
 - **Google Analytics is dead.** Universal Analytics (`UA-…` IDs) stopped
   collecting data in 2023. Either remove the snippet from
   `_layouts/default.html` or replace it with GA4 or another analytics tool.
