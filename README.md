@@ -8,13 +8,14 @@ blog about Ruby, Ember, Scala and whatever else I felt like writing about
 
 | Piece | What's used | Where |
 | --- | --- | --- |
-| Site generator | [Jekyll](https://jekyllrb.com/) 3.8.5, pulled in by the [`github-pages`](https://github.com/github/pages-gem) gem (v198) | `Gemfile`, `Gemfile.lock` |
-| Hosting | [GitHub Pages](https://pages.github.com/) user site (`MattMSumner.github.io`) | — |
-| Custom domain | `appallingfarrago.com` | `CNAME` |
-| Ruby | 2.6.1 | `.ruby-version` |
-| Markdown | kramdown (the GitHub Pages default) | — |
+| Site generator | [Jekyll](https://jekyllrb.com/) 4.4 | `Gemfile`, `Gemfile.lock` |
+| Ruby | 4.0.7 | `.ruby-version` |
+| Build & deploy | GitHub Actions, publishing to [GitHub Pages](https://pages.github.com/) | `.github/workflows/pages.yml` |
+| Hosting | GitHub Pages user site (`MattMSumner.github.io`) | — |
+| Custom domain | `appallingfarrago.com`, DNS on Cloudflare (DNS only, not proxied) | Pages settings, `CNAME` |
+| Markdown | kramdown with GFM input (Jekyll's default) | — |
 | Syntax highlighting | [Rouge](https://github.com/rouge-ruby/rouge) | `_config.yml`, `_sass/_syntax.scss` |
-| Styles | Sass, compiled by Jekyll, with vendored copies of thoughtbot's [Bourbon](https://www.bourbon.io/), [Neat](https://neat.bourbon.io/) and Bitters-style base styles | `css/app.scss`, `_sass/` |
+| Styles | Sass, compiled by Jekyll with Dart Sass, using vendored copies of thoughtbot's [Bourbon](https://www.bourbon.io/), [Neat](https://neat.bourbon.io/) and Bitters-style base styles | `css/app.scss`, `_sass/` |
 | Fonts | Google Fonts (Source Sans Pro, Poly, Anonymous Pro) | `css/app.scss` |
 | Plugins | `jekyll-redirect-from` (keeps old post URLs working) | `_config.yml` |
 | RSS | Hand-written Liquid template | `feed.xml` |
@@ -25,7 +26,9 @@ Jekyll site.
 ## Layout of the repo
 
 ```
-_config.yml         Site name, description, URL, highlighter, plugins
+_config.yml         Site name, description, URL, plugins, Sass options
+.github/workflows/
+  pages.yml         Builds the site and deploys it to GitHub Pages
 _layouts/
   default.html      Page shell: header, footer, CSS
   post.html         Wraps a single post (title + date + content)
@@ -35,7 +38,7 @@ css/app.scss        Sass entry point; Jekyll compiles it to /css/app.css
 img/                Images referenced from posts
 index.html          Home page: lists every post with its excerpt
 feed.xml            RSS feed of the 10 most recent posts
-CNAME               Custom domain for GitHub Pages
+CNAME               Custom domain (informational; see Deploying)
 ```
 
 ## Writing a post
@@ -64,25 +67,32 @@ Post body in Markdown...
 
 ## Running locally
 
+Ruby is managed with [mise](https://mise.jdx.dev/), which installs the version
+in `.ruby-version`. mise only reads `.ruby-version` once that's enabled, so on
+a new machine run:
+
+```sh
+brew install mise
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc   # or your shell's equivalent
+mise settings add idiomatic_version_file_enable_tools ruby
+mise install          # installs the Ruby from .ruby-version
+```
+
+Then, in this repo:
+
 ```sh
 bundle install
 bundle exec jekyll serve --livereload
 ```
 
-Then open <http://localhost:4000>. The generated site goes to `_site/`, which
-is gitignored.
+Open <http://localhost:4000>. The generated site goes to `_site/`, which is
+gitignored.
 
-**Expect some friction after 7 years.** The lockfile pins Ruby 2.6 era gems,
-for example `nokogiri 1.10.3` and `github-pages 198`. These may not compile on
-a current Ruby or on Apple Silicon. The easiest fix is usually to refresh the
-lockfile:
+The build prints a lot of Sass deprecation warnings from the vendored
+Bourbon/Neat code. They're harmless for now (see Known issues).
 
-```sh
-bundle update github-pages
-```
-
-GitHub Pages ignores `Gemfile.lock` anyway (see below). Updating it locally
-just brings your preview closer to what production actually builds.
+To update dependencies, run `bundle update`. Bump `.ruby-version` to change
+Ruby; CI picks it up from that file.
 
 ## Deploying
 
@@ -92,22 +102,32 @@ Deployment is just a push:
 git push origin master
 ```
 
-GitHub Pages builds every push to `master` with its own Jekyll and publishes
-the result to `appallingfarrago.com`. There's no CI config and no build step
-to run yourself. Build status and errors show up under the repo's
-**Settings → Pages** and in the **Actions** tab on GitHub.
+`.github/workflows/pages.yml` builds the site with the exact gems in
+`Gemfile.lock` (with `JEKYLL_ENV=production`) and deploys it to GitHub Pages.
+Pull requests run the same build without deploying, so a broken build shows up
+on the PR. Progress and errors are in the repo's **Actions** tab. You can also
+re-deploy by hand from there with **Run workflow**.
 
 A few things to know:
 
-- GitHub builds with **its own** pinned versions of Jekyll and plugins, listed
-  at <https://pages.github.com/versions/>. Your `Gemfile.lock` is not used.
-- Only plugins on the GitHub Pages
-  [allow-list](https://pages.github.com/versions/) work.
-  `jekyll-redirect-from` is on it.
-- The `CNAME` file controls the custom domain. Don't delete it.
+- **Settings → Pages → Source** must be **GitHub Actions**. The old
+  "Deploy from a branch" mode would ignore the workflow and build with GitHub's
+  own Jekyll 3.
+- Any Jekyll plugin works, since we're not limited to GitHub's allow-list.
+  Add it to the `:jekyll_plugins` group in the `Gemfile` and to `plugins:` in
+  `_config.yml`.
+- The custom domain is configured in **Settings → Pages**. With Actions
+  deploys, GitHub doesn't read the `CNAME` file, but it's harmless and documents
+  the domain.
+- DNS lives in Cloudflare and points straight at GitHub: four `A` and four
+  `AAAA` records for the apex, and `www` as a `CNAME` to
+  `mattmsumner.github.io`. All are **DNS only** (grey cloud). Turning on
+  Cloudflare's proxy stops GitHub from renewing the HTTPS certificate.
 
 ## Known issues / housekeeping
 
-Things I noticed while writing this README, not yet fixed:
-
-- **Old Ruby.** `.ruby-version` pins 2.6.1, which reached end of life in 2022.
+- **Sass deprecations.** The vendored Bourbon 4 / Neat 1 code uses Sass
+  features (`@import`, `/` division, global functions like `lighten()`) that
+  Dart Sass 3 will remove. It compiles fine on Dart Sass 1.x today. The
+  long-term fix is replacing Bourbon/Neat with plain CSS, since modern CSS
+  covers almost everything they provide.
