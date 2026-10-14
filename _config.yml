@@ -10,6 +10,5 @@ sass:
   sourcemap: never
 redirect_from:
   json: false
-# Jekyll 4 adds its defaults (Gemfile, vendor/, node_modules, ...) to this list.
 exclude:
   - README.md
