@@ -110,8 +110,6 @@ A few things to know:
 
 Things I noticed while writing this README, not yet fixed:
 
-- **Mixed-content font imports.** `css/app.scss` loads Google Fonts over
-  `http://`, which browsers block on an HTTPS page. Switch them to `https://`.
 - **`site.url` is `http://www.…`** in `_config.yml`, but the site is served
   from `https://appallingfarrago.com/`. That affects absolute links in
   `feed.xml`.
