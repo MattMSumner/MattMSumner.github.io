@@ -1,7 +1,7 @@
 name: Appalling Farrago
 title: Appalling Farrago
 description: A blog about ruby, ember and anything else I want to write about.
-url: https://appallingfarrago.com/
+url: https://appallingfarrago.com
 highlighter: rouge
 plugins:
   - jekyll-redirect-from

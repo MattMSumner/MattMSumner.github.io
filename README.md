@@ -110,8 +110,4 @@ A few things to know:
 
 Things I noticed while writing this README, not yet fixed:
 
-- **Double slashes in the RSS feed.** `feed.xml` builds links as
-  `{{ site.url }}/{{ post.url }}`, but both pieces already contain a slash.
-  `jekyll-feed`, which GitHub Pages supports, could replace the hand-written
-  feed.
 - **Old Ruby.** `.ruby-version` pins 2.6.1, which reached end of life in 2022.
